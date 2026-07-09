@@ -76,40 +76,6 @@
     .rb-bar-fill { height:100%;border-radius:999px;background:var(--grad); }
     .rb-pct { font-size:0.78rem;font-weight:600;color:var(--gray-m);width:30px;text-align:right; }
 
-    /* VIDEO PLACEHOLDERS */
-    .vid-section { padding:5rem 0; }
-    .vid-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:1.3rem; }
-    .vid-card {
-      background:var(--card-bg);
-      border:1px solid var(--card-b);
-      border-radius:var(--r-xl);
-      overflow:hidden;
-      transition:var(--t);
-      cursor:pointer;
-    }
-    .vid-card:hover { border-color:var(--card-bh);transform:translateY(-6px); }
-    .vid-thumb {
-      height:160px;
-      background:linear-gradient(135deg,rgba(37,99,235,.2),rgba(0,191,255,.12));
-      display:flex;align-items:center;justify-content:center;
-      position:relative;
-      font-size:0.9rem;
-      color:var(--gray-m);
-    }
-    .vid-play {
-      width:54px;height:54px;border-radius:50%;
-      background:rgba(255,255,255,.12);
-      border:2px solid rgba(255,255,255,.25);
-      display:flex;align-items:center;justify-content:center;
-      font-size:1.3rem;color:var(--white);
-      backdrop-filter:blur(8px);
-      transition:var(--t);
-    }
-    .vid-card:hover .vid-play { background:var(--grad);border-color:transparent;box-shadow:0 8px 24px rgba(37,99,235,.5); }
-    .vid-info { padding:1.2rem; }
-    .vid-client { font-size:0.9rem;font-weight:700;color:var(--white);margin-bottom:0.2rem; }
-    .vid-role { font-size:0.75rem;color:var(--gray-m); }
-
     /* CTA */
     .tes-cta { padding:5rem 0;text-align:center; }
     .tes-cta h2 { margin-bottom:1rem; }
@@ -126,11 +92,20 @@
       box-shadow:var(--sh-md);
       animation:waFloat 5s ease-in-out infinite;
     }
-    .proof-grid .wa-mock:nth-child(2) { animation-delay:1.2s; }
+    .proof-grid > *:nth-child(2) { animation-delay:1.2s; }
     @keyframes waFloat {
       0%, 100% { transform:translateY(0); }
       50%      { transform:translateY(-8px); }
     }
+    .proof-shot {
+      border-radius:var(--r-xl);
+      overflow:hidden;
+      box-shadow:var(--sh-md);
+      animation:waFloat 5s ease-in-out infinite;
+      display:flex;
+      align-items:center;
+    }
+    .proof-shot img { width:100%;height:100%;object-fit:cover;display:block; }
     .wa-head { display:flex;align-items:center;gap:0.6rem;padding:0 0.2rem 1rem;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:1rem; }
     .wa-av { width:32px;height:32px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:700;color:#fff;flex-shrink:0; }
     .wa-name { font-size:0.85rem;font-weight:600;color:var(--white); }
@@ -149,12 +124,10 @@
       .trust-grid { grid-template-columns:repeat(2,1fr); }
       .tb-item:nth-child(2)::after { display:none; }
       .rating-inner { grid-template-columns:1fr;gap:2.5rem; }
-      .vid-grid { grid-template-columns:repeat(2,1fr); }
     }
     @media(max-width:640px){
       .reviews-grid { grid-template-columns:1fr; }
       .feat-rev { padding:2rem; }
-      .vid-grid { grid-template-columns:1fr; }
       .trust-grid { grid-template-columns:1fr 1fr; }
       .tb-item:nth-child(2)::after { display:none; }
       .proof-grid { grid-template-columns:1fr; }
@@ -210,20 +183,8 @@
       <h2 class="s-title">Screenshots <span class="g-text">7a9i9iyin</span></h2>
     </div>
     <div class="proof-grid">
-      <div class="wa-mock reveal">
-        <div class="wa-head">
-          <div class="wa-av">C</div>
-          <div><div class="wa-name">Client</div><div class="wa-status">en ligne</div></div>
-        </div>
-        <div class="wa-bubble wa-out">
-          <div class="wa-file"><i class="fas fa-file-image"></i> design_final.png · 1 Mo</div>
-          Kijak a bro ? final result
-          <span class="wa-time">13:40 ✓✓</span>
-        </div>
-        <div class="wa-bubble wa-in">
-          lay3tik seeha abroo❤️ cleaan👌👌
-          <span class="wa-time">13:51</span>
-        </div>
+      <div class="proof-shot reveal">
+        <img src="proof/feedback-abdoart.png" alt="Feedback client 7a9i9i" loading="lazy">
       </div>
       <div class="wa-mock reveal d1">
         <div class="wa-head">
@@ -422,45 +383,6 @@
           <span class="rb-label">1 étoile</span>
           <div class="rb-bar-track"><div class="rb-bar-fill" style="width:0%"></div></div>
           <span class="rb-pct">0%</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- VIDEO TESTIMONIALS (Placeholders) -->
-<section class="vid-section">
-  <div class="container">
-    <div class="s-hd c reveal">
-      <div class="chip">Témoignages vidéo</div>
-      <h2 class="s-title">Hear it from <span class="g-text">their own words</span></h2>
-    </div>
-    <div class="vid-grid">
-      <div class="vid-card reveal">
-        <div class="vid-thumb">
-          <div class="vid-play"><i class="fas fa-play"></i></div>
-        </div>
-        <div class="vid-info">
-          <div class="vid-client">Akram Aboulaid</div>
-          <div class="vid-role">Créateur de Contenu — "Comment j'ai atteint 50K abonnés"</div>
-        </div>
-      </div>
-      <div class="vid-card reveal d1">
-        <div class="vid-thumb">
-          <div class="vid-play"><i class="fas fa-play"></i></div>
-        </div>
-        <div class="vid-info">
-          <div class="vid-client">Gusto Chicken Fries</div>
-          <div class="vid-role">Restaurant — "De 0 à 1.2M vues en 30 jours"</div>
-        </div>
-      </div>
-      <div class="vid-card reveal d2">
-        <div class="vid-thumb">
-          <div class="vid-play"><i class="fas fa-play"></i></div>
-        </div>
-        <div class="vid-info">
-          <div class="vid-client">Lavernasweet</div>
-          <div class="vid-role">Pâtisserie — "Commandes x3 en 3 mois"</div>
         </div>
       </div>
     </div>
