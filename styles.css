@@ -2,7 +2,7 @@
    PROFITIZE.AGENCY — Premium Design System
    ============================================= */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&family=Tajawal:wght@400;500;700;800&family=Cairo:wght@500;600;700;800&display=swap');
 
 /* ===== CSS VARIABLES ===== */
 :root {
@@ -30,8 +30,8 @@
   --sh-md:  0 10px 35px rgba(0,0,0,.4);
   --sh-lg:  0 25px 70px rgba(0,0,0,.5);
 
-  --font:    'Inter', sans-serif;
-  --font-h:  'Space Grotesk', sans-serif;
+  --font:    'Inter', 'Tajawal', sans-serif;
+  --font-h:  'Space Grotesk', 'Cairo', sans-serif;
 
   --r-s:  6px;
   --r-m:  12px;
