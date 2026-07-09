@@ -81,18 +81,9 @@
     .tes-cta h2 { margin-bottom:1rem; }
     .tes-cta p  { color:var(--gray-m);max-width:500px;margin:0 auto 2.5rem; }
 
-    /* REAL PROOF — WhatsApp screenshots mockup */
+    /* REAL PROOF — real client screenshots */
     .proof-section { padding:5rem 0 2rem; }
-    .proof-grid { display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;max-width:900px;margin:0 auto; }
-    .wa-mock {
-      background:#0B141A;
-      border:1px solid var(--card-b);
-      border-radius:var(--r-xl);
-      padding:1.1rem 1rem 1.3rem;
-      box-shadow:var(--sh-md);
-      animation:waFloat 5s ease-in-out infinite;
-    }
-    .proof-grid > *:nth-child(2) { animation-delay:1.2s; }
+    .proof-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem;max-width:1100px;margin:0 auto; }
     @keyframes waFloat {
       0%, 100% { transform:translateY(0); }
       50%      { transform:translateY(-8px); }
@@ -105,18 +96,9 @@
       display:flex;
       align-items:center;
     }
+    .proof-grid > *:nth-child(2) { animation-delay:1s; }
+    .proof-grid > *:nth-child(3) { animation-delay:2s; }
     .proof-shot img { width:100%;height:100%;object-fit:cover;display:block; }
-    .wa-head { display:flex;align-items:center;gap:0.6rem;padding:0 0.2rem 1rem;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:1rem; }
-    .wa-av { width:32px;height:32px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:700;color:#fff;flex-shrink:0; }
-    .wa-name { font-size:0.85rem;font-weight:600;color:var(--white); }
-    .wa-status { font-size:0.68rem;color:var(--gray-m); }
-    .wa-bubble { max-width:82%;padding:0.5rem 0.7rem;border-radius:9px;font-size:0.82rem;line-height:1.5;margin-bottom:0.5rem;position:relative;color:#E9EDEF; }
-    .wa-in  { background:#202C33;border-top-left-radius:2px; }
-    .wa-out { background:#005C4B;border-top-right-radius:2px;margin-left:auto; }
-    .wa-time { font-size:0.6rem;color:#8696A0;display:block;text-align:right;margin-top:0.2rem; }
-    .wa-file { display:flex;align-items:center;gap:0.5rem;background:rgba(255,255,255,.05);border-radius:6px;padding:0.4rem 0.5rem;margin-bottom:0.4rem;font-size:0.72rem;color:var(--gray-m); }
-    .wa-file i { color:#F59E0B; }
-    .wa-deleted { font-style:italic;color:#8696A0; }
     .proof-cap { text-align:center;font-size:0.78rem;color:var(--gray-m);margin-top:1.2rem; }
 
     @media(max-width:1024px){
@@ -124,6 +106,7 @@
       .trust-grid { grid-template-columns:repeat(2,1fr); }
       .tb-item:nth-child(2)::after { display:none; }
       .rating-inner { grid-template-columns:1fr;gap:2.5rem; }
+      .proof-grid { grid-template-columns:1fr 1fr; }
     }
     @media(max-width:640px){
       .reviews-grid { grid-template-columns:1fr; }
@@ -186,17 +169,11 @@
       <div class="proof-shot reveal">
         <img src="proof/feedback-abdoart.png" alt="Feedback client 7a9i9i" loading="lazy">
       </div>
-      <div class="wa-mock reveal d1">
-        <div class="wa-head">
-          <div class="wa-av">C</div>
-          <div><div class="wa-name">Client</div><div class="wa-status">en ligne</div></div>
-        </div>
-        <div class="wa-bubble wa-out">cc<span class="wa-time">23:06 ✓✓</span></div>
-        <div class="wa-bubble wa-in">Akhi cv<span class="wa-time">23:09</span></div>
-        <div class="wa-bubble wa-out wa-deleted">Vous avez supprimé ce message.<span class="wa-time">23:10</span></div>
-        <div class="wa-bubble wa-in">Lahoma barikk<span class="wa-time">23:10</span></div>
-        <div class="wa-bubble wa-in">Jat nadya<span class="wa-time">23:11</span></div>
-        <div class="wa-bubble wa-out">lay7fdk<span class="wa-time">23:11 ✓✓</span></div>
+      <div class="proof-shot reveal d1">
+        <img src="proof/feedback-whatsapp-chat.jpeg" alt="Feedback client 7a9i9i" loading="lazy">
+      </div>
+      <div class="proof-shot reveal d2">
+        <img src="proof/feedback-rh-fries.jpeg" alt="Feedback client 7a9i9i" loading="lazy">
       </div>
     </div>
     <p class="proof-cap">Screens dyal WhatsApp dyalna m3a clients — bla montage, bla fake.</p>
