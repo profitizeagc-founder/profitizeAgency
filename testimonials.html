@@ -115,6 +115,35 @@
     .tes-cta h2 { margin-bottom:1rem; }
     .tes-cta p  { color:var(--gray-m);max-width:500px;margin:0 auto 2.5rem; }
 
+    /* REAL PROOF — WhatsApp screenshots mockup */
+    .proof-section { padding:5rem 0 2rem; }
+    .proof-grid { display:grid;grid-template-columns:1fr 1fr;gap:1.6rem;max-width:900px;margin:0 auto; }
+    .wa-mock {
+      background:#0B141A;
+      border:1px solid var(--card-b);
+      border-radius:var(--r-xl);
+      padding:1.1rem 1rem 1.3rem;
+      box-shadow:var(--sh-md);
+      animation:waFloat 5s ease-in-out infinite;
+    }
+    .proof-grid .wa-mock:nth-child(2) { animation-delay:1.2s; }
+    @keyframes waFloat {
+      0%, 100% { transform:translateY(0); }
+      50%      { transform:translateY(-8px); }
+    }
+    .wa-head { display:flex;align-items:center;gap:0.6rem;padding:0 0.2rem 1rem;border-bottom:1px solid rgba(255,255,255,.06);margin-bottom:1rem; }
+    .wa-av { width:32px;height:32px;border-radius:50%;background:var(--grad);display:flex;align-items:center;justify-content:center;font-size:0.8rem;font-weight:700;color:#fff;flex-shrink:0; }
+    .wa-name { font-size:0.85rem;font-weight:600;color:var(--white); }
+    .wa-status { font-size:0.68rem;color:var(--gray-m); }
+    .wa-bubble { max-width:82%;padding:0.5rem 0.7rem;border-radius:9px;font-size:0.82rem;line-height:1.5;margin-bottom:0.5rem;position:relative;color:#E9EDEF; }
+    .wa-in  { background:#202C33;border-top-left-radius:2px; }
+    .wa-out { background:#005C4B;border-top-right-radius:2px;margin-left:auto; }
+    .wa-time { font-size:0.6rem;color:#8696A0;display:block;text-align:right;margin-top:0.2rem; }
+    .wa-file { display:flex;align-items:center;gap:0.5rem;background:rgba(255,255,255,.05);border-radius:6px;padding:0.4rem 0.5rem;margin-bottom:0.4rem;font-size:0.72rem;color:var(--gray-m); }
+    .wa-file i { color:#F59E0B; }
+    .wa-deleted { font-style:italic;color:#8696A0; }
+    .proof-cap { text-align:center;font-size:0.78rem;color:var(--gray-m);margin-top:1.2rem; }
+
     @media(max-width:1024px){
       .reviews-grid { grid-template-columns:1fr 1fr; }
       .trust-grid { grid-template-columns:repeat(2,1fr); }
@@ -128,6 +157,7 @@
       .vid-grid { grid-template-columns:1fr; }
       .trust-grid { grid-template-columns:1fr 1fr; }
       .tb-item:nth-child(2)::after { display:none; }
+      .proof-grid { grid-template-columns:1fr; }
     }
   </style>
 </head>
@@ -156,7 +186,7 @@
   <div class="container" style="position:relative;z-index:1;">
     <div class="chip reveal" style="margin:0 auto 1rem;">Témoignages</div>
     <h1 class="reveal d1">Real clients,<br><span class="g-text">real results</span></h1>
-    <p class="reveal d2">Pas de témoignages inventés. Ce sont les vrais retours de nos clients après avoir travaillé avec ProfitizeAgency.</p>
+    <p class="reveal d2">Hna maka-nkhtr3o walo. Hadchi houma les retours 7a9i9iyin dyal clients dyalna ba3d ma khdmo m3ana.</p>
   </div>
 </section>
 
@@ -171,6 +201,46 @@
     </div>
   </div>
 </div>
+
+<!-- REAL PROOF -->
+<section class="proof-section">
+  <div class="container">
+    <div class="s-hd c reveal">
+      <div class="chip">Proof, machi fake</div>
+      <h2 class="s-title">Screenshots <span class="g-text">7a9i9iyin</span></h2>
+    </div>
+    <div class="proof-grid">
+      <div class="wa-mock reveal">
+        <div class="wa-head">
+          <div class="wa-av">C</div>
+          <div><div class="wa-name">Client</div><div class="wa-status">en ligne</div></div>
+        </div>
+        <div class="wa-bubble wa-out">
+          <div class="wa-file"><i class="fas fa-file-image"></i> design_final.png · 1 Mo</div>
+          Kijak a bro ? final result
+          <span class="wa-time">13:40 ✓✓</span>
+        </div>
+        <div class="wa-bubble wa-in">
+          lay3tik seeha abroo❤️ cleaan👌👌
+          <span class="wa-time">13:51</span>
+        </div>
+      </div>
+      <div class="wa-mock reveal d1">
+        <div class="wa-head">
+          <div class="wa-av">C</div>
+          <div><div class="wa-name">Client</div><div class="wa-status">en ligne</div></div>
+        </div>
+        <div class="wa-bubble wa-out">cc<span class="wa-time">23:06 ✓✓</span></div>
+        <div class="wa-bubble wa-in">Akhi cv<span class="wa-time">23:09</span></div>
+        <div class="wa-bubble wa-out wa-deleted">Vous avez supprimé ce message.<span class="wa-time">23:10</span></div>
+        <div class="wa-bubble wa-in">Lahoma barikk<span class="wa-time">23:10</span></div>
+        <div class="wa-bubble wa-in">Jat nadya<span class="wa-time">23:11</span></div>
+        <div class="wa-bubble wa-out">lay7fdk<span class="wa-time">23:11 ✓✓</span></div>
+      </div>
+    </div>
+    <p class="proof-cap">Screens dyal WhatsApp dyalna m3a clients — bla montage, bla fake.</p>
+  </div>
+</section>
 
 <!-- REVIEWS -->
 <section class="reviews-section">
@@ -187,7 +257,7 @@
           <div class="rev-stars">★★★★★</div>
           <span class="rev-badge">Client vedette</span>
         </div>
-        <p class="rev-text">ProfitizeAgency n'est pas juste une agence — c'est un vrai partenaire de croissance. En 4 mois, ils ont fait passer mon Instagram de 5K à plus de 55K abonnés avec des Reels viraux qui ont généré plus de 5 millions de vues. Mon engagement a explosé, j'ai décroché 3 partenariats avec des marques et mes revenus en ligne ont doublé. Ce sont des gens sérieux qui livrent ce qu'ils promettent.</p>
+        <p class="rev-text">ProfitizeAgency machi ghi agence 3adia, houma vrai partner dyal nmo. F 4 chhur bddlo l'Instagram dyali men 5K l +55K follower b reels li deshaw viral w jabo +5 million view. L'engagement tar bzaf, sift 3andi 3 partenariats m3a des marques w les revenus dyali f l'internet doubliw. Nas jadin, dima kaywafiw b li kayw3do.</p>
         <div class="rev-author">
           <div class="rev-av">A</div>
           <div>
@@ -201,7 +271,7 @@
       <!-- Review 2 -->
       <div class="card rev-card reveal">
         <div class="rev-top"><div class="rev-stars">★★★★★</div></div>
-        <p class="rev-text">Wallah ces gars ont complètement changé notre business. Gusto Chicken Fries était connu localement, mais maintenant on a des gens qui viennent de partout après nous avoir vus sur Instagram. Le Reel qu'ils ont créé a fait 1.2 million de vues ! Les ventes ont augmenté de 40% en 2 mois.</p>
+        <p class="rev-text">Wallah had l3ibad bddlo shi 7aja f business dyalna. Gusto Chicken Fries kan m3rouf ghi f l7oma, daba 3ndna nas kayjiw men koulchi ba3d ma chafona f Instagram. L Reel li darou wsel l 1.2 million view! Les ventes zado b 40% f 2 chhur.</p>
         <div class="rev-author">
           <div class="rev-av">G</div>
           <div>
@@ -215,7 +285,7 @@
       <!-- Review 3 -->
       <div class="card rev-card reveal d1">
         <div class="rev-top"><div class="rev-stars">★★★★★</div></div>
-        <p class="rev-text">Les résultats Ads qu'ils ont obtenus pour Jeldex.ma sont impressionnants. ROI de 2.5x dès le premier mois, 250 leads qualifiés par mois et +75% de taux de conversion sur le site. Ils savent exactement quoi faire pour que chaque dirham investi rapporte.</p>
+        <p class="rev-text">Nata2ij dyal Ads li jabo l Jeldex.ma bahyin bzaf. ROI dyal 2.5x mn chhr lawel, 250 lead qualifié f chaque chhr w +75% conversion f site. Kay3rfo mzyan chno khasshoum ydiro bach koul dirham li tsrf yrj3 fih l fayda.</p>
         <div class="rev-author">
           <div class="rev-av">J</div>
           <div>
@@ -229,7 +299,7 @@
       <!-- Review 4 -->
       <div class="card rev-card reveal">
         <div class="rev-top"><div class="rev-stars">★★★★★</div></div>
-        <p class="rev-text">Notre pâtisserie Lavernasweet n'avait aucune présence digitale avant ProfitizeAgency. Ils ont créé toute notre identité visuelle, notre contenu Instagram et nos campagnes. Maintenant on a 850K de portée et nos commandes ont triplé. On est sold-out à chaque nouveau produit.</p>
+        <p class="rev-text">Pâtisserie dyalna Lavernasweet makan 3ndhach 7ta présence digitale qbel ProfitizeAgency. Darou lina identité visuelle kamla, contenu Instagram w campagnes. Daba 3ndna 850K portée w les commandes tlato. Kanbi3o kolchi f koula produit jdid.</p>
         <div class="rev-author">
           <div class="rev-av">L</div>
           <div>
@@ -243,7 +313,7 @@
       <!-- Review 5 -->
       <div class="card rev-card reveal d1">
         <div class="rev-top"><div class="rev-stars">★★★★★</div></div>
-        <p class="rev-text">Le professionnalisme de ProfitizeAgency est top. Pour RH Friterie, ils ont géré nos publicités Facebook et augmenté nos commandes de livraison de 120% en 3 mois. Toujours disponibles sur WhatsApp, toujours réactifs et ils savent ce qu'ils font.</p>
+        <p class="rev-text">L professionnalisme dyal ProfitizeAgency top. Darou lina jami3 ta3diyat dyal l menu bsur3a w b diqqa, w gérew les publicités Facebook dyalna, commandes dyal livraison zado b 120% f 3 chhur. Dima disponibles f WhatsApp, dima kayjawbo bsur3a.</p>
         <div class="rev-author">
           <div class="rev-av">R</div>
           <div>
@@ -257,7 +327,7 @@
       <!-- Review 6 -->
       <div class="card rev-card reveal d2">
         <div class="rev-top"><div class="rev-stars">★★★★★</div></div>
-        <p class="rev-text">Pizzagon a maintenant une vraie identité de marque et une présence digitale qui fait la différence. ProfitizeAgency nous a aidés à ranker en premier sur Google pour les recherches locales et nos commandes en ligne ont augmenté significativement. Service impeccable.</p>
+        <p class="rev-text">Pizzagon daba 3ndha identité de marque 7a9i9iya w présence digitale li kat-fer9. ProfitizeAgency 3awnona nranki lawel f Google l les recherches locales w les commandes online zado bzaf. Service top, bla chi mochkil.</p>
         <div class="rev-author">
           <div class="rev-av">P</div>
           <div>
@@ -271,7 +341,7 @@
       <!-- Review 7 -->
       <div class="card rev-card reveal">
         <div class="rev-top"><div class="rev-stars">★★★★★</div></div>
-        <p class="rev-text">Coffe Nirmine avait une belle adresse mais peu de visibilité en ligne. ProfitizeAgency a créé une identité Instagram cohérente et professionnelle. Maintenant les clients viennent en disant "je vous ai vu sur Instagram". Notre CA a augmenté de 35% depuis qu'on travaille avec eux.</p>
+        <p class="rev-text">Coffe Nirmine kan 3ndo blassa zwina walakin chwiya visibilité online. ProfitizeAgency darou lina identité Instagram cohérente w professionnelle. Daba les clients kayjiw kayqulo "chftikom f Instagram". CA dyalna zad b 35% mnin bdina nkhdmo m3ahom.</p>
         <div class="rev-author">
           <div class="rev-av">N</div>
           <div>
@@ -285,7 +355,7 @@
       <!-- Review 8 -->
       <div class="card rev-card reveal d1">
         <div class="rev-top"><div class="rev-stars">★★★★★</div></div>
-        <p class="rev-text">WaffleFactory cherchait à attirer un public jeune sur TikTok et Instagram. ProfitizeAgency a créé des contenus ultra créatifs qui sont devenus viraux. On a eu 500K de portée, nos weekends sont complets et la queue devant le shop s'étend jusqu'à la rue. Incroyable !</p>
+        <p class="rev-text">WaffleFactory kant bghia twsel l chab f TikTok w Instagram. ProfitizeAgency darou contenu créatif bzaf li wla viral. Wslna l 500K portée, weekend dyalna kaymla w la queue quddam l shop kat-tewl l zanka. Chi 7aja mora l 3a9el!</p>
         <div class="rev-author">
           <div class="rev-av">W</div>
           <div>
@@ -299,7 +369,7 @@
       <!-- Review 9 -->
       <div class="card rev-card reveal d2">
         <div class="rev-top"><div class="rev-stars">★★★★★</div></div>
-        <p class="rev-text">J'avais des doutes au départ — est-ce que le digital allait vraiment fonctionner pour mon secteur ? ProfitizeAgency m'a convaincu avec des résultats concrets dès le premier mois. Stratégie claire, exécution propre, communication excellente. Je les recommande sans hésitation.</p>
+        <p class="rev-text">Kan 3ndi chek f lawel — wach digital ghadi ykhdem 7a9i9i f secteur dyali? ProfitizeAgency 9an3atni b nata2ij wadi7in mn chhr lawel. Stratégie clara, exécution nadifa, communication top. Kanrecommandih bla 7ta trddoud.</p>
         <div class="rev-author">
           <div class="rev-av">Z</div>
           <div>
